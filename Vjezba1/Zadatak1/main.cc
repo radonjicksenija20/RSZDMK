@@ -1,23 +1,20 @@
 #include <stdio.h>
 
-int Calculation(int a, int b)
+void PrintResult(int res)
 {
-if(a > b)
-return a - b;
-else
-return b - a;
+printf("Result: %d\n", res);
 }
 
 
 int main()
 {
-int a = 3;
-int b = 8;
+int a = 5;
+int b = 4;
 int c;
 if(a > b)
 c = a - b;
 else
 c = b - a;
-printf("Result: %d\n", c);
+PrintResult( c);
 return 0;
 }
