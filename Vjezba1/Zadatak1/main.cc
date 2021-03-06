@@ -9,13 +9,22 @@ return b - a;
 }
  //stoe
 
+void PrintResult(int res)
+{
+printf("Result: %d\n", res);
+}
+
+
+
 int main()
 {
-int a = 3;
-int b = 8;
+int a = 5;
+int b = 4;
 int c;
+
 Calculation(a,  b);
 
-printf("Result: %d\n", c);
+PrintResult( c);
+
 return 0;
 }
