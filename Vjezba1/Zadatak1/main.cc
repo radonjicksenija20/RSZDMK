@@ -7,7 +7,7 @@ return a - b;
 else
 return b - a;
 }
-
+ //stoe
 
 int main()
 {
