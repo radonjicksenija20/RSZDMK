@@ -1,0 +1,1 @@
+Nije vazno ispisacu kod samo vjezbam Git
