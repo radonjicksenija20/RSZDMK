@@ -1,0 +1,60 @@
+\hypertarget{main_8c}{}\doxysection{main.\+c File Reference}
+\label{main_8c}\index{main.c@{main.c}}
+
+
+Glavna Petlja.  
+
+
+{\ttfamily \#include \char`\"{}usart.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$util/delay.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int8\+\_\+t \mbox{\hyperlink{main_8c_a6e922185fd0d7448d00827e36e0544ab}{Provjera}} (int8\+\_\+t predefinisana\+\_\+rijec\mbox{[}$\,$\mbox{]}, int8\+\_\+t nova\+\_\+rijec\mbox{[}$\,$\mbox{]}, int8\+\_\+t duzina)
+\item 
+int \mbox{\hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Glavna Petlja. 
+
+\begin{DoxyAuthor}{Author}
+Radonjic Ksenija 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+13 -\/ 05 -\/ 2021 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+predefinisane vrijednosti
+
+predefinisane vrijednosti\mbox{\Hypertarget{main_8c_a6e922185fd0d7448d00827e36e0544ab}\label{main_8c_a6e922185fd0d7448d00827e36e0544ab}} 
+\index{main.c@{main.c}!Provjera@{Provjera}}
+\index{Provjera@{Provjera}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{Provjera()}{Provjera()}}
+{\footnotesize\ttfamily int8\+\_\+t Provjera (\begin{DoxyParamCaption}\item[{int8\+\_\+t}]{predefinisana\+\_\+rijec\mbox{[}$\,$\mbox{]},  }\item[{int8\+\_\+t}]{nova\+\_\+rijec\mbox{[}$\,$\mbox{]},  }\item[{int8\+\_\+t}]{duzina }\end{DoxyParamCaption})}
+
+Provjera -\/ Funkcija provjerava jednakost rijeci 
+\begin{DoxyParams}{Parameters}
+{\em -\/} & predefinisana\+\_\+rijec -\/ rijec koju imamo \\
+\hline
+{\em -\/} & nova\+\_\+rijec -\/ onu koju unosimo preko serijskog \\
+\hline
+{\em -\/} & duzina -\/ duzina rijeci \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ res -\/ vraca 1 ukoliko je tacno a 0 ako nije 
+\end{DoxyReturn}

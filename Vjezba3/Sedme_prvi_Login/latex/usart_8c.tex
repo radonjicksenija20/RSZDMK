@@ -1,0 +1,118 @@
+\hypertarget{usart_8c}{}\doxysection{usart.\+c File Reference}
+\label{usart_8c}\index{usart.c@{usart.c}}
+
+
+Funkcije za upravljanje serijskim portom.  
+
+
+{\ttfamily \#include $<$avr/io.\+h$>$}\newline
+{\ttfamily \#include $<$avr/interrupt.\+h$>$}\newline
+{\ttfamily \#include $<$avr/pgmspace.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}usart.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{usart_8c_aeb4d08554f9d720d601cad4848bf34fa}{usart\+Init}} (uint32\+\_\+t baud)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{usart_8c_ae241fdca8770ad73133079f19889e5d4}{usart\+Available}} ()
+\item 
+void \mbox{\hyperlink{usart_8c_a61d5542e76ce0cf34bf587493e3e8333}{usart\+Put\+Char}} (int8\+\_\+t c)
+\item 
+void \mbox{\hyperlink{usart_8c_a3fcc5813a6354743a3a7c97b71cbb167}{usart\+Put\+String}} (int8\+\_\+t $\ast$s)
+\item 
+void \mbox{\hyperlink{usart_8c_ac62b712cb6d27a48972f21a4afe5328d}{usart\+Put\+String\+\_\+P}} (const int8\+\_\+t $\ast$s)
+\item 
+int8\+\_\+t \mbox{\hyperlink{usart_8c_a69568a196a9ba0868437ffd94670ff65}{usart\+Get\+Char}} ()
+\item 
+uint8\+\_\+t \mbox{\hyperlink{usart_8c_a2fbdc0142ee50b24d45eb72ed1fa3976}{usart\+Get\+String}} (int8\+\_\+t $\ast$s)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Funkcije za upravljanje serijskim portom. 
+
+\begin{DoxyAuthor}{Author}
+Radonjic Ksenija 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+14-\/04-\/2019 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{usart_8c_ae241fdca8770ad73133079f19889e5d4}\label{usart_8c_ae241fdca8770ad73133079f19889e5d4}} 
+\index{usart.c@{usart.c}!usartAvailable@{usartAvailable}}
+\index{usartAvailable@{usartAvailable}!usart.c@{usart.c}}
+\doxysubsubsection{\texorpdfstring{usartAvailable()}{usartAvailable()}}
+{\footnotesize\ttfamily uint8\+\_\+t usart\+Available (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Funkcija vraca broj neocitanih karaktera u prijemnom baferu. \begin{DoxyReturn}{Returns}
+broj neocitanih karaktera u prijemnom baferu 
+\end{DoxyReturn}
+\mbox{\Hypertarget{usart_8c_a69568a196a9ba0868437ffd94670ff65}\label{usart_8c_a69568a196a9ba0868437ffd94670ff65}} 
+\index{usart.c@{usart.c}!usartGetChar@{usartGetChar}}
+\index{usartGetChar@{usartGetChar}!usart.c@{usart.c}}
+\doxysubsubsection{\texorpdfstring{usartGetChar()}{usartGetChar()}}
+{\footnotesize\ttfamily int8\+\_\+t usart\+Get\+Char (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Funkcija vraca sledeci neprocitani karakter iz prijemnog bafera. Ukoliko je prijemni bafer prazan, vraca -\/1. \begin{DoxyReturn}{Returns}
+sledeci neprocitani karakter iz prijemnog bafera 
+\end{DoxyReturn}
+\mbox{\Hypertarget{usart_8c_a2fbdc0142ee50b24d45eb72ed1fa3976}\label{usart_8c_a2fbdc0142ee50b24d45eb72ed1fa3976}} 
+\index{usart.c@{usart.c}!usartGetString@{usartGetString}}
+\index{usartGetString@{usartGetString}!usart.c@{usart.c}}
+\doxysubsubsection{\texorpdfstring{usartGetString()}{usartGetString()}}
+{\footnotesize\ttfamily uint8\+\_\+t usart\+Get\+String (\begin{DoxyParamCaption}\item[{int8\+\_\+t $\ast$}]{s }\end{DoxyParamCaption})}
+
+Funkcija ocitava sve karaktere iz prijemnog bafera i od njih formira string. 
+\begin{DoxyParams}{Parameters}
+{\em s} & pokazivac na bafer u koji se smesta string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+broj ocitanih karaktera 
+\end{DoxyReturn}
+\mbox{\Hypertarget{usart_8c_aeb4d08554f9d720d601cad4848bf34fa}\label{usart_8c_aeb4d08554f9d720d601cad4848bf34fa}} 
+\index{usart.c@{usart.c}!usartInit@{usartInit}}
+\index{usartInit@{usartInit}!usart.c@{usart.c}}
+\doxysubsubsection{\texorpdfstring{usartInit()}{usartInit()}}
+{\footnotesize\ttfamily void usart\+Init (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{baud }\end{DoxyParamCaption})}
+
+Funkcija inicijalizuje U\+S\+A\+RT modul. 
+\begin{DoxyParams}{Parameters}
+{\em baud} & brzina serijske komunikacije, izrazena u bitima u sekundi \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{usart_8c_a61d5542e76ce0cf34bf587493e3e8333}\label{usart_8c_a61d5542e76ce0cf34bf587493e3e8333}} 
+\index{usart.c@{usart.c}!usartPutChar@{usartPutChar}}
+\index{usartPutChar@{usartPutChar}!usart.c@{usart.c}}
+\doxysubsubsection{\texorpdfstring{usartPutChar()}{usartPutChar()}}
+{\footnotesize\ttfamily void usart\+Put\+Char (\begin{DoxyParamCaption}\item[{int8\+\_\+t}]{c }\end{DoxyParamCaption})}
+
+Funkcija salje zadati karakter preko serijskog porta. 
+\begin{DoxyParams}{Parameters}
+{\em c} & karakter za slanje \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{usart_8c_a3fcc5813a6354743a3a7c97b71cbb167}\label{usart_8c_a3fcc5813a6354743a3a7c97b71cbb167}} 
+\index{usart.c@{usart.c}!usartPutString@{usartPutString}}
+\index{usartPutString@{usartPutString}!usart.c@{usart.c}}
+\doxysubsubsection{\texorpdfstring{usartPutString()}{usartPutString()}}
+{\footnotesize\ttfamily void usart\+Put\+String (\begin{DoxyParamCaption}\item[{int8\+\_\+t $\ast$}]{s }\end{DoxyParamCaption})}
+
+Funkcija salje string (niz karaktera) smesten u R\+AM memoriju preko serijskog porta. 
+\begin{DoxyParams}{Parameters}
+{\em s} & pokazivac na string u R\+AM memoriji \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{usart_8c_ac62b712cb6d27a48972f21a4afe5328d}\label{usart_8c_ac62b712cb6d27a48972f21a4afe5328d}} 
+\index{usart.c@{usart.c}!usartPutString\_P@{usartPutString\_P}}
+\index{usartPutString\_P@{usartPutString\_P}!usart.c@{usart.c}}
+\doxysubsubsection{\texorpdfstring{usartPutString\_P()}{usartPutString\_P()}}
+{\footnotesize\ttfamily void usart\+Put\+String\+\_\+P (\begin{DoxyParamCaption}\item[{const int8\+\_\+t $\ast$}]{s }\end{DoxyParamCaption})}
+
+Funkcija salje string (niz karaktera) smesten u programsku F\+L\+A\+SH memoriju preko serijskog porta. 
+\begin{DoxyParams}{Parameters}
+{\em s} & pokazivac na string u programskoj F\+L\+A\+SH memoriji \\
+\hline
+\end{DoxyParams}
